@@ -15,7 +15,7 @@ add_action( 'template_redirect', function() {
         return;
     }
 
-    $allowed_params = [ 'utm_source', 'utm_medium', 'utm_campaign', 's', 'p', 'preview' ];
+    $allowed_params = [ 'utm_source', 'utm_medium', 'utm_campaign', 's', 'p', 'preview', '_thumbnail_id', 'preview_nonce', 'preview_id' ];
 
     $current_query = $_GET;
     $clean_query = array_intersect_key( $current_query, array_flip( $allowed_params ) );
