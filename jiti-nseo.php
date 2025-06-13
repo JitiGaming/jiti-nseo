@@ -11,7 +11,7 @@
 defined( 'ABSPATH' ) || exit;
 
 add_action( 'template_redirect', function() {
-    // Ne rien faire dans l'administration
+    // Ne rien faire dans l'administration. Bug : certains composers peuvent buguer, à corriger.
     if ( is_admin() ) {
         return;
     }
